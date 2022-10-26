@@ -1,0 +1,12 @@
+---
+- name: install raspotify
+  apt:
+    name: raspotify
+    state: present
+    update_cache: yes
+
+- name: configure raspotify
+  template:
+    src: raspotify
+    dest: /etc/default/raspotify
+

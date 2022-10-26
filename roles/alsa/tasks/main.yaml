@@ -1,0 +1,9 @@
+- name: install alsa
+  apt:
+      name: [alsa, alsa-utils]
+
+- name: Copy alsa config to remote
+  template:
+      src: alsa-base.conf
+      dest: /etc/modprobe.d/alsa-base.conf
+
